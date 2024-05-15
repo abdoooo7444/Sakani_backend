@@ -48,9 +48,10 @@ const propertySchema = mongoose.Schema({
 const Resdential = mongoose.model('Resdential', propertySchema);
 const Commercial = mongoose.model('Commercial', propertySchema);
 const Property = mongoose.model('Property', propertySchema);
+// const favourite = mongoose.model('favourite', propertySchema);
 module.exports = {
     Resdential,
     Commercial,
-    Property
+    Property 
 };
 

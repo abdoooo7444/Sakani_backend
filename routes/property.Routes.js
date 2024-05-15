@@ -16,8 +16,8 @@ router.route('/Res')
 
 router.route('/Res/:propertyId').delete(PropertyController.deleteResdentiaal);
 
-router.route('/Res/:propertyaddress') // Use ":address" as a parameter
-    .get(PropertyController.getSingleResdentialbyaddress);
+router.route('/Res/::searchParam?') // Use ":address" as a parameter
+    .get(PropertyController.getSingleResdentialbyquery);
 
 
 router.route('/Comm')
@@ -25,8 +25,8 @@ router.route('/Comm')
     .get(PropertyController.getCommercial)
 
 
-router.route('/Comm/:propertyaddress') // Use ":address" as a parameter
-    .get(PropertyController.getSinglecommercialbyaddress);
+router.route('/Comm/:searchParam?') // '?' makes the parameter optional
+    .get(PropertyController.getSingleCommercialByQuery);
 
 
 router.route('/Comm/:propertyId')
