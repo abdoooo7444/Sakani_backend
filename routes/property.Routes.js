@@ -8,15 +8,13 @@ const property = require('../models/properties');
 const PropertyController = require('../controller/property.controller');
 
 
-
-
 router.route('/Res')
-    .post(PropertyController.addResdential)
+    .post(PropertyController.uploadProImg,PropertyController.addResdential)
     .get(PropertyController.getResdential);
 
 router.route('/Res/:propertyId').delete(PropertyController.deleteResdentiaal);
 
-router.route('/Res/::searchParam?') // Use ":address" as a parameter
+router.route('/Res/:searchParam?') // Use ":address" as a parameter
     .get(PropertyController.getSingleResdentialbyquery);
 
 
@@ -27,7 +25,7 @@ router.route('/Comm')
 
 router.route('/Comm/:searchParam?') // '?' makes the parameter optional
     .get(PropertyController.getSingleCommercialByQuery);
-
+    
 
 router.route('/Comm/:propertyId')
     .delete(PropertyController.deleteCommercial);

@@ -16,7 +16,7 @@ const favouriteSchema = mongoose.Schema({
         type: Number,
         required: false
     },
-    phoneNumber: {
+    phoneNmber: {
         type: Number,
         required: false
     },

@@ -28,9 +28,16 @@ const propertySchema = mongoose.Schema({
         type: String,
         required: false
     },
-    image: {
-        type: String ,
-        required : false 
+    imagePath: {
+        type: String,
+        required : true,
+        // default: "https://via.placeholder.com/150",
+        validator: {
+            validator: function (path) {
+                return validator.isURL(path);
+            },
+            message: "image path must be a valid URL",
+        },
     },
     longitude: {
         type: Number,
@@ -52,6 +59,6 @@ const Property = mongoose.model('Property', propertySchema);
 module.exports = {
     Resdential,
     Commercial,
-    Property 
+    Property
 };
 

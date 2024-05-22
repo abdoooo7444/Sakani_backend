@@ -17,12 +17,16 @@ const tourRequestRouter = require('./routes/tourRequest.Routes');
 const favouritRouter = require('./routes/favourite.routes')
 
 
+
+
 // let gfs ;
 // const conn = mongose.Connection ;
 // conn.once("open" , fucation()=  {
 //         gfs: Grid(conn.db, mongose.mongo) ,
 //         gfs.collection("photos")
 // })
+
+
 
 
 app.use('/api/Users', userRouter);
@@ -35,7 +39,7 @@ app.use('/api/tours', tourRequestRouter);
 
 
 
-app.listen(4000, () => {
+app.listen(4000,() => {
     console.log('listening on port 4000');
 })
 
